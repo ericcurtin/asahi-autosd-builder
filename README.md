@@ -1,6 +1,6 @@
-# asahi-centosstream-builder
+# asahi-autosd-builder
 
-Builds a minimal CentOS Stream 9 image to run on Apple M1 systems. Kudos to Leif Liddy and Asahi community for helping make this happen.
+Builds a minimal AutoSD 9 image to run on Apple M1 systems. Kudos to Leif Liddy and Asahi community for helping make this happen.
 
 This is completely unofficial and on a best-effort basis. It's for personal usage, but if you'd like to use it and contribute great.
 
@@ -17,11 +17,11 @@ note: at present building the arch-install-scripts is only available on fedora 3
 Make sure to update your macOS to version 12.3 or later, then just pull up a Terminal in macOS and paste in this command:
 
 ```
-curl https://ecurtin.fedorapeople.org/centos.sh | sh
+curl https://ecurtin.fedorapeople.org/autosd.sh | sh
 ```
 
 **Notes:** 
-1. The root password is **centosstream**
+1. The root password is **autosd**
 2. On the first boot the ```asahi-firstboot.service``` will run and will take around ```45 seconds``` to complete.  
    Do not shutdown or reboot the system before this service has completed.  
 3. The Asahi Linux-related RPM's (and Source RPM's) used in this image can be found here:  
@@ -29,7 +29,7 @@ curl https://ecurtin.fedorapeople.org/centos.sh | sh
    All RPM's signed are signed by a GPG key.  
    The repo config can be found here:   
    https://ecurtin.fedorapeople.org/asahi-linux/asahi-linux.repo  
-4. The CentOS Stream kernel config used is nearly identical to the kernel config used by the Asahi Linux project (a few CentOS Stream specific modifications were made):
+4. The AutoSD Stream kernel config used is nearly identical to the kernel config used by the Asahi Linux project (a few AutoSD specific modifications were made, in particular CONFIG_PREEMPT_RT):
 
    https://github.com/AsahiLinux/PKGBUILDs/blob/main/linux-asahi/config
 5. ```systemd-networkd``` is the sole network service that's installed in this image.  

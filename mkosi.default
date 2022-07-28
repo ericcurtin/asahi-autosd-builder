@@ -9,7 +9,7 @@ Repositories=baseos,appstream,crb,epel,asahi-linux
 Format=directory
 Output=mkosi.rootfs
 Bootable=no
-Hostname=centosstream
+Hostname=autosd
 
 [Content]
 WithDocs=True
@@ -64,4 +64,4 @@ Packages=
     zram-generator
 
 [Validation]
-Password=centosstream
+Password=autosd
